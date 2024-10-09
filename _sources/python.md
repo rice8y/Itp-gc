@@ -64,9 +64,3 @@ plt.show()
 ### 解説
 
 過去にHTML+JSで作成したシミュレーションがあったので[こちら](https://rice8y.github.io/Itp-gc/levy.html)を参照してください.
-
----
-<div style="display: flex; justify-content: space-between;">
-  <a href="./intro.md">< 開発環境準備</a>&nbsp;&nbsp;&nbsp;
-  <a href="./c.md">C ></a>
-</div>

@@ -1,7 +1,8 @@
 # プログラミング入門@Google Colaboratory
 
-> [!CAUTION]
-> Google Colaboratoryにおいて各言語でHello, World!するところまでしか扱いません.
+```{warning}
+Google Colaboratoryにおいて各言語でHello, World!するところまでしか扱いません.
+```
 
 ## 対象読者
 
