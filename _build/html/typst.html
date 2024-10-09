@@ -423,7 +423,7 @@ document.write(`
 <div><p>[!CAUTION]
 Rustがインストール済みであることを前提とします. 未インストールの方は<a class="reference internal" href="#../docs/rust.md"><span class="xref myst">Rust</span></a>を参照してください.</p>
 </div></blockquote>
-<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>!cargo install --git https://github.com/typst/typst --locked typst-cli
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>!cargo<span class="w"> </span>install<span class="w"> </span>--git<span class="w"> </span>https://github.com/typst/typst<span class="w"> </span>--locked<span class="w"> </span>typst-cli
 </pre></div>
 </div>
 <blockquote>
@@ -459,7 +459,7 @@ Hello, World!
 </section>
 <section id="id4">
 <h4>2つ目のセル<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
-<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>!typst compile hello.typ
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>!typst<span class="w"> </span>compile<span class="w"> </span>hello.typ
 </pre></div>
 </div>
 <p>ここでは, <code class="docutils literal notranslate"><span class="pre">typst</span> <span class="pre">compile</span></code>で<code class="docutils literal notranslate"><span class="pre">hello.typ</span></code>から<code class="docutils literal notranslate"><span class="pre">hello.pdf</span></code>を生成しています.</p>
@@ -476,7 +476,7 @@ Hello, World!
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>します.</p></li>
 </ol>
-<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>!git clone https://github.com/rice8y/cetzuron.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>!git<span class="w"> </span>clone<span class="w"> </span>https://github.com/rice8y/cetzuron.git
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
@@ -486,9 +486,9 @@ Hello, World!
 <div><p>[!NOTE]
 一応, <code class="docutils literal notranslate"><span class="pre">justfile</span></code>と<code class="docutils literal notranslate"><span class="pre">.bat</span></code>のインストールスクリプトもあります.</p>
 </div></blockquote>
-<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>%%shell
-cd cetzuron
-chmod +x install.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>%%shell
+<span class="nb">cd</span><span class="w"> </span>cetzuron
+chmod<span class="w"> </span>+x<span class="w"> </span>install.sh
 ./install.sh
 </pre></div>
 </div>

@@ -8,7 +8,7 @@ RustはGoogle Colaboratoryの初期設定では使えないため, まずはイ�
 
 1. 以下のコードをGoogle Colaboratory上で実行します.
 
-```txt
+```bash
 %%shell
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain stable -y
 ```
@@ -28,7 +28,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-t
 
 3. 以下のコードでインストール確認をします.
 
-```txt
+```bash
 %%shell
 rustc --version
 cargo --version
@@ -67,7 +67,7 @@ fn main() {
 
 #### 2つ目のセル
 
-```txt
+```bash
 !rustc hello.rs
 !./hello
 ```

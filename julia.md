@@ -58,7 +58,7 @@ fi
 
 以下のような出力が得られればOKです.
 
-```txt
+```bash
 Installing Julia 1.11.0 on the current Colab Runtime...
 2024-10-09 15:19:40 URL:https://storage.googleapis.com/julialang2/bin/linux/x64/1.11/julia-1.11.0-linux-x86_64.tar.gz [254121552/254121552] -> "/tmp/julia.tar.gz" [1]
 Installing Julia package IJulia...

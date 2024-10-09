@@ -413,8 +413,8 @@ document.write(`
 <ol class="arabic simple">
 <li><p>以下のコードをGoogle Colaboratory上で実行します.</p></li>
 </ol>
-<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>%%shell
-curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain stable -y
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>%%shell
+curl<span class="w"> </span>--proto<span class="w"> </span><span class="s1">&#39;=https&#39;</span><span class="w"> </span>--tlsv1.2<span class="w"> </span>-sSf<span class="w"> </span>https://sh.rustup.rs<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh<span class="w"> </span>-s<span class="w"> </span>--<span class="w"> </span>--default-toolchain<span class="w"> </span>stable<span class="w"> </span>-y
 </pre></div>
 </div>
 <blockquote>
@@ -431,11 +431,11 @@ curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --d
 <ol class="arabic simple" start="3">
 <li><p>以下のコードでインストール確認をします.</p></li>
 </ol>
-<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>%%shell
-rustc --version
-cargo --version
-rustdoc --version
-rustup --version
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>%%shell
+rustc<span class="w"> </span>--version
+cargo<span class="w"> </span>--version
+rustdoc<span class="w"> </span>--version
+rustup<span class="w"> </span>--version
 </pre></div>
 </div>
 <p>以下のような出力が得られればOKです.</p>
@@ -467,7 +467,7 @@ rustup --version
 </section>
 <section id="id5">
 <h4>2つ目のセル<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
-<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>!rustc hello.rs
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>!rustc<span class="w"> </span>hello.rs
 !./hello
 </pre></div>
 </div>
