@@ -34,8 +34,9 @@
 
 ![gc07](../_images/gc07.png)
 
-> [!TIP]
-> `Shift+Enter`でも実行可能です. なお, `Shift+Enter`で実行する場合, 次のセルに移動します. この際に, 次のセルが存在しない場合 (現在の実行セルが最下行である場合), 新規セルが作成されます.
+```{tip}
+`Shift+Enter`でも実行可能です. なお, `Shift+Enter`で実行する場合, 次のセルに移動します. この際に, 次のセルが存在しない場合 (現在の実行セルが最下行である場合), 新規セルが作成されます.
+```
 
 #### コードの追加
 
@@ -48,8 +49,3 @@
 左上のファイル名 (Google Driveのロゴの横) をクリックしてファイル名を変更します. 以下は, `Untitled3.ipynb`から`hello.ipynb`に変更している例です.
 
 ![gc09](../_images/gc09.png)
-
----
-<div style="text-align: right;">
-  <a href="./python.md">Python ></a>
-</div>
