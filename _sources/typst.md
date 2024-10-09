@@ -11,7 +11,7 @@ TypstはGoogle Colaboratoryの初期設定では使えないため, まずはイ
 > [!CAUTION]
 > Rustがインストール済みであることを前提とします. 未インストールの方は[Rust](../docs/rust.md)を参照してください.
 
-```txt
+```bash
 !cargo install --git https://github.com/typst/typst --locked typst-cli
 ```
 
@@ -55,7 +55,7 @@ Hello, World!
 
 #### 2つ目のセル
 
-```txt
+```bash
 !typst compile hello.typ
 ```
 
@@ -73,7 +73,7 @@ Hello, World!
 
 1. `git clone`します.
 
-```txt
+```bash
 !git clone https://github.com/rice8y/cetzuron.git
 ```
 
@@ -82,7 +82,7 @@ Hello, World!
 > [!NOTE]
 > 一応, `justfile`と`.bat`のインストールスクリプトもあります.
 
-```txt
+```bash
 %%shell
 cd cetzuron
 chmod +x install.sh

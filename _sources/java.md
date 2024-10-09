@@ -31,7 +31,7 @@ public class Hello{
 
 #### 2つ目のセル
 
-```txt
+```bash
 !javac Hello.java
 !java Hello
 ```

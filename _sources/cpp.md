@@ -32,7 +32,7 @@ int main(){
 
 #### 2つ目のセル
 
-```txt
+```bash
 !g++ -hello.cpp -o hello
 !./hello
 ```

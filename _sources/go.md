@@ -52,7 +52,7 @@ func main() {
 
 #### 2つ目のセル
 
-```txt
+```bash
 !go run hello.go
 !go build hello.go
 !./hello
