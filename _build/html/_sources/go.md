@@ -14,13 +14,13 @@ GoはGoogle Colaboratoryの初期設定では使えないため, まずはイン
 
 以下のような出力が得られればOKです.
 
-![go01](../_images/go01.png)
+![go01](./_images/go01.png)
 
 1. `!go version`でインストール確認をします.
 
 以下のような出力が得られればOKです.
 
-![go02](../_images/go02.png)
+![go02](./_images/go02.png)
 
 ## Goプログラムの実行手順
 
@@ -31,7 +31,7 @@ GoはGoogle Colaboratoryの初期設定では使えないため, まずはイン
 
 以下は, Goで標準出力をする例です.
 
-![go03](../_images/go03.png)
+![go03](./_images/go03.png)
 
 ### 解説
 

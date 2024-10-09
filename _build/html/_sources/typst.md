@@ -20,7 +20,7 @@ TypstはGoogle Colaboratoryの初期設定では使えないため, まずはイ
 
 以下のような出力が得られればOKです.
 
-![typ01](../_images/typ01.png)
+![typ01](./_images/typ01.png)
 
 2. `!cp /root/.cargo/bin/* /usr/local/bin`でバイナリファイルをローカルにコピーします.
 
@@ -28,17 +28,17 @@ TypstはGoogle Colaboratoryの初期設定では使えないため, まずはイ
 
 以下のような出力が得られればOKです.
 
-![typ02](../_images/typ02.png)
+![typ02](./_images/typ02.png)
 
 ## Hello, World!
 
 以下は, TypstでHello, World!をする例です.
 
-![typ03](../_images/typ03.png)
+![typ03](./_images/typ03.png)
 
 `!ls`で確認すると, `hello.pdf`が生成されていることが分かります. 実際に, PDF Viewerで確認すると以下のようになります.
 
-![typ04](../_images/typ04.png)
+![typ04](./_images/typ04.png)
 
 ### 解説
 
@@ -91,17 +91,17 @@ chmod +x install.sh
 
 以下のような出力が得られればOKです.
 
-![typ05](../_images/typ05.png)
+![typ05](./_images/typ05.png)
 
 ### オートエンコーダ
 
 以下は, オートエンコーダを描画する例です.
 
-![typ06](../_images/typ06.png)
+![typ06](./_images/typ06.png)
 
 warningが出ていますが無視します. 出力は以下のようになります.
 
-![typ07](../_images/typ07.png)
+![typ07](./_images/typ07.png)
 
 #### 解説
 
