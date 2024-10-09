@@ -63,4 +63,4 @@ plt.show()
 
 ### 解説
 
-過去にHTML+JSで作成したシミュレーションがあったので[こちら](https://rice8y.github.io/Itp-gc/levy.html)を参照してください.
+過去にHTML+JSで作成したシミュレーションがあったので[こちら](https://rice8y.github.io/gh/levy.html)を参照してください.
