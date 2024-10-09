@@ -13,8 +13,9 @@ RustはGoogle Colaboratoryの初期設定では使えないため, まずはイ�
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain stable -y
 ```
 
-> [!TIP]
-> シェルコマンドを実行する際には, `!`を使用します (複数行の場合は`%%shell`).
+```{tip}
+シェルコマンドを実行する際には, `!`を使用します (複数行の場合は`%%shell`).
+```
 
 ![rs01](../_images/rs01.png)
 
@@ -22,7 +23,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-t
 
 ![rs02](../_images/rs02.png)
 
-2. `!cp /root/.cargo/bin/* /usr/local/bin`でバイナリファイルをコピーします.
+1. `!cp /root/.cargo/bin/* /usr/local/bin`でバイナリファイルをコピーします.
 
 元々は, `!source $HOME/.cargo/env`で環境変数を設定するはずでしたが何故か上手くいきませんでした...
 
@@ -73,10 +74,3 @@ fn main() {
 ```
 
 1行目では, `hello.rs`を`rustc`でコンパイルし, 実行ファイル`hello`を生成しています. 2行目では, 実行ファイル`hello`を実行しています.
-
----
-<div style="display: flex; justify-content: space-between;">
-  <a href="./julia.md">< Julia</a>
-  &nbsp;&nbsp;
-  <a href="./go.md">Go ></a>
-</div>
