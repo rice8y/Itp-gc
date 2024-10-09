@@ -6,33 +6,33 @@
 
 1. [https://colab.research.google.com/](https://colab.research.google.com/) へアクセスします.
 
-![gc01](./_images/gc01.png)
+![gc01](../_images/gc01.png)
 
 1. Googleアカウントでログインします.
 
-![gc02](./_images/gc02.png)
+![gc02](../_images/gc02.png)
 
 以下のようになればOKです.
 
-![gc03](./_images/gc03.png)
+![gc03](../_images/gc03.png)
 
 ### 基本的な使い方
 
 #### ノートブック (`.ipynb`) の新規作成
 
 1. `ファイル > ドライブの新しいノートブック` を選択し, ノートブックを新規作成します.
-![gc03](./_images/gc03.png) 以下のようになればOKです.
-![gc05](./_images/gc05.png)
+![gc03](../_images/gc03.png) 以下のようになればOKです.
+![gc05](../_images/gc05.png)
 
 #### コードの実行
 
 1. コードセルにコードを記述します (以下は, Pythonで標準出力をする例).
 
-![gc06](./_images/gc06.png)
+![gc06](../_images/gc06.png)
 
 1. 実行ボタンをクリックします.
 
-![gc07](./_images/gc07.png)
+![gc07](../_images/gc07.png)
 
 ```{tip}
 `Shift+Enter`でも実行可能です. なお, `Shift+Enter`で実行する場合, 次のセルに移動します. この際に, 次のセルが存在しない場合 (現在の実行セルが最下行である場合), 新規セルが作成されます.
@@ -42,10 +42,10 @@
 
 左上の`+コード`やコードセルの下部にカーソルを合わせた際に表示される`+コード`をクリックして追加します.
 
-![gc08](./_images/gc08.png)
+![gc08](../_images/gc08.png)
 
 #### ファイル名の変更
 
 左上のファイル名 (Google Driveのロゴの横) をクリックしてファイル名を変更します. 以下は, `Untitled3.ipynb`から`hello.ipynb`に変更している例です.
 
-![gc09](./_images/gc09.png)
+![gc09](../_images/gc09.png)

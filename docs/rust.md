@@ -16,11 +16,11 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-t
 > [!TIP]
 > シェルコマンドを実行する際には, `!`を使用します (複数行の場合は`%%shell`).
 
-![rs01](./_images/rs01.png)
+![rs01](../_images/rs01.png)
 
 以下のような出力が得られればOKです.
 
-![rs02](./_images/rs02.png)
+![rs02](../_images/rs02.png)
 
 2. `!cp /root/.cargo/bin/* /usr/local/bin`でバイナリファイルをコピーします.
 
@@ -38,7 +38,7 @@ rustup --version
 
 以下のような出力が得られればOKです.
 
-![rs03](./_images/rs03.png)
+![rs03](../_images/rs03.png)
 
 ## Rustプログラムの実行手順
 
@@ -50,7 +50,7 @@ rustup --version
 
 以下は, Rustで標準出力をする例です.
 
-![rs04](./_images/rs04.png)
+![rs04](../_images/rs04.png)
 
 ### 解説
 

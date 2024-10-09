@@ -54,7 +54,7 @@ if [ -z `which julia` ]; then
 fi
 ```
 
-![jl01](./_images/jl01.png)
+![jl01](../_images/jl01.png)
 
 以下のような出力が得られればOKです.
 
@@ -74,7 +74,7 @@ jump to the 'Checking the Installation' section.
 2. ノートブックを再読み込みします.
 3. `julia --version`でインストール確認をします. 以下のように出力されればOKです.
 
-![jl03](./_images/jl03.png)
+![jl03](../_images/jl03.png)
 
 ```{tip}
 シェルコマンドを実行する際には, `!`を使用します (複数行の場合は`%%shell`).
@@ -84,7 +84,7 @@ jump to the 'Checking the Installation' section.
 
 以下は, Juliaで標準出力をする例です.
 
-![jl04](./_images/jl04.png)
+![jl04](../_images/jl04.png)
 
 ### 解説
 
@@ -102,7 +102,7 @@ Pkg.add("Plots")
 Pkg.add("LaTeXStrings")
 ```
 
-![jl05](./_images/jl05.png)
+![jl05](../_images/jl05.png)
 
 パッケージのインストールが完了したら, 実際に描画していきます.
 
@@ -114,8 +114,8 @@ $$
 
 を描画しています.
 
-![jl06](./_images/jl06.png)
-![jl07](./_images/jl07.png)
+![jl06](../_images/jl06.png)
+![jl07](../_images/jl07.png)
 
 ### 解説
 

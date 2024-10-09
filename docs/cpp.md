@@ -12,7 +12,7 @@ C++はコンパイラ言語のため, Google Colaboratory上で直接セルを�
 
 以下は, C++で標準出力をする例です.
 
-![cpp](./_images/cpp.png)
+![cpp](../_images/cpp.png)
 
 ### 解説
 

@@ -12,7 +12,7 @@ Javaはコンパイラ言語のため, Google Colaboratory上で直接セルを�
 
 以下は, Javaで標準出力をする例です.
 
-![java](./_images/java.png)
+![java](../_images/java.png)
 
 ### 解説
 
