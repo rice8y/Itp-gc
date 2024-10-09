@@ -1,0 +1,12 @@
+format: jb-article
+root: _docs/intro
+sections:
+- file: _docs/pre
+- file: _docs/python
+- file: _docs/c
+- file: _docs/cpp
+- file: _docs/java
+- file: _docs/julia
+- file: _docs/rust
+- file: _docs/go
+- file: _docs/typst

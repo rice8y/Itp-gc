@@ -1,0 +1,53 @@
+title: Introduction to Programming 
+author: Eito YONEYAMA
+copyright: "2024"
+logo: _images/logo.png
+
+execute:
+  execute_notebooks: force
+  timeout: -1
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+bibtex_bibfiles:
+  - references.bib
+
+repository:
+  url: https://github.com/rice8y/Itp-gc
+  path_to_book: docs  
+  branch: main  
+
+html:
+  # favicon                   : "_images/icon.png"  
+  use_edit_page_button      : true 
+  use_repository_button     : true  
+  use_issues_button         : false  
+  home_page_in_navbar       : true
+  extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+  baseurl                   : https://rice8y.github.io/Itp-gc/
+  extra_footer: |
+        <div>
+        <script src="https://utteranc.es/client.js"
+        repo="rice8y/sqlite3"
+        issue-term="title"
+        label="💬"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+        </script>
+        </div>
+
+launch_buttons:
+  notebook_interface: jupyterlab
+  colab_url: https://colab.research.google.com
+
+sphinx:
+  config:
+    language: unknown
+    bibtex_reference_style: author_year
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+parse:
+   myst_url_schemes: [mailto, http, https]

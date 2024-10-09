@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>2 次元ランダムウォーク</title>
+    <style>
+        .scaled-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+    </style>
+    <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax:{inlineMath: [['$', '$']]},
+    messageStyle: "none"
+    });
+    </script>
+</head>
+
+<body>
+    <h3>レヴィウォーク</h3>
+    <canvas id="c1" width="400" height="400"></canvas><br>
+    移動回数：<span id="move">0</span>&emsp;原点復帰回数：<span id="cnt">0</span><br>
+    <script type="text/javascript">
+        var canvas = document.getElementById('c1');
+        var ctx = canvas.getContext("2d");
+        var p, tid = null;
+        var x, y, move, cnt;
+        const iter = 5;
+        const scale = 1.0;
+
+        function gamma(x) {
+            if (x <= 0) {
+                console.error("math domain error");
+            }
+
+            let ier = 0;
+
+            if (x > 5.0) {
+                let v = 1.0 / x;
+                let s = ((((((-0.000592166437354 * v + 0.0000697281375837) * v + 0.00078403922172) * v - 0.000229472093621) * v - 0.00268132716049) * v + 0.00347222222222) * v + 0.0833333333333) * v + 1.0;
+                let g = 2.506628274631001 * Math.exp(-x) * Math.pow(x, x - 0.5) * s;
+            } else {
+                let err = 1.0e-20;
+                let w = x;
+                let t = 1.0;
+                if (x < 1.5) {
+                    if (x < err) {
+                        let k = parseInt(x);
+                        let y = parseFloat(k) - x;
+                        if (Math.abs(y) < err || Math.abs(1.0 - y) < err) {
+                            ier = - 1;
+                        }
+                    }
+                    if (ier == 0) {
+                        while (w < 1.5) {
+                            t /= w;
+                            w += 1.0;;
+                        }
+                    }
+                } else {
+                    if (w > 2.5) {
+                        while (w > 2.5) {
+                            w -= 1.0;
+                            t *= w;
+                        }
+                    }
+                }
+                w -= 2.0;
+                g = (((((((0.0021385778 * w - 0.0034961289) * w + 0.0122995771) * w - 0.00012513767) * w + 0.0740648982) * w + 0.0815652323) * w + 0.411849671) * w + 0.422784604) * w + 0.999999926;
+                g *= t;
+            }
+            return g;
+        }
+
+        function randomNormal() {
+            let r1 = Math.random();
+            let r2 = Math.random();
+            return Math.sqrt(-2 * Math.log(r1)) * Math.cos(2 * Math.PI * r2);
+        }
+
+        function mantegna(beta) {
+            if (beta < 0.005) {
+                beta = 0.005;
+            }
+            let t = gamma(1 + beta) * Math.sin(Math.PI * beta / 2);
+            t = t / (gamma((1 + beta) / 2) * beta * 2 ** ((beta - 1) / 2));
+            let siguma = t ** (1 / beta)
+            let u = randomNormal() * siguma;
+            let v = randomNormal();
+            let s = (Math.abs(v) ** (1 / beta));
+            if (s < 0.0001) {
+                s = 0.0001;
+            }
+            s = u / s;
+            return s;
+        }
+
+        function init() {
+            x = y = 200; // 開始座標 
+            move = cnt = 0; // 移動回数と原点復帰回数を初期化 
+            document.getElementById("move").innerHTML = move;
+            document.getElementById("cnt").innerHTML = cnt;
+            if (tid !== null) {
+                clearTimeout(tid);
+            }
+            ctx.beginPath();
+            ctx.fillStyle = 'black';
+            ctx.fillRect(0, 0, 400, 400); //背景を黒で描画 
+            ctx.putImageData(p, x, y);
+            update();
+        }
+
+        function update() {
+            var r = [];
+            for (var i = 0; i < iter; i++) {
+                r.push(Math.random());
+            }
+            for (var i = 0; i < iter; i++) {
+                if (r[i] < 0.25) {
+                    y += mantegna(scale);
+                } else if (r[i] < 0.5) {
+                    x += mantegna(scale);
+                } else if (r[i] < 0.75) {
+                    y -= mantegna(scale);
+                } else {
+                    x -= mantegna(scale);
+                }
+                document.getElementById("move").innerHTML = ++move;
+                if (x == 200 && y == 200) { // 原点に復帰した 
+                    document.getElementById("cnt").innerHTML = ++cnt;
+                }
+                ctx.putImageData(p, x, y); // 点を描画する 
+            }
+            tid = setTimeout(update, 50); //50 ミリ秒経過後に呼び出す 
+        }
+
+        p = ctx.createImageData(1, 1); // 点の画像を用意 
+        p.data[0] = 0; // R 
+        p.data[1] = 255; // G 
+        p.data[2] = 0; // B 
+        p.data[3] = 255; // 透明度 (255 は透明にしない) 
+        init();
+    </script>
+    <input type="button" value="再スタート" onClick="init()">
+    <br>
+    <h2>レヴィウォークについて</h2>
+    レヴィウォークとは, ステップがレヴィ分布に従う乱数であるランダムウォークである. <br>
+    レヴィ分布の確率密度関数は, <br><br>
+    <center>
+        $f(x;\mu,c)=\sqrt{\dfrac{c}{2\pi}}\dfrac{e^{-c/2(x-\mu)}}{(x-\mu)^{3/2}}$
+    </center><br>
+    である. また, レヴィ分布に従う乱数は Mantegna アルゴリズムで求める. レヴィ分布に従う乱数 $s$は, <br><br>
+    <center>
+        $s=\dfrac{u}{|v|^{1/\beta}}$
+    </center><br>
+    で表される. <br>
+    ここで,  $\beta$ $(\{\beta\in\mathbb{R}\mid0\leq\beta\leq2\} )$ はスケーリング指数,  $u$ は平均 $0$ , 分散 $\sigma^{2}$ の正規分布に従う乱数,  $v$ は標準正規分布に従う乱数である. <br>
+    また, 標準偏差 $\sigma$ は, <br><br>
+    <center>
+        $\sigma=\left(\dfrac{\Gamma(1+\beta)\sin\left(\frac{\pi\beta}{2}\right)}{\Gamma\left(\frac{1+\beta}{2}\right)\beta2^{(\beta-1)/2}}\right)$
+    </center><br>
+    で算出される. ここで,  $\Gamma$ はガンマ関数<br><br>
+    <center>
+        $\Gamma(x)=\displaystyle\int_{0}^{\infty}t^{x-1}e^{-t}dt$
+    </center><br>
+    を表す. <br>
+    標準正規分布に従う乱数 $v$ は, ボックス=ミュラー法で求められる. <br><br>
+    <center>
+        $z=\sqrt{-2\log X}\cos2\pi Y$
+    </center><br>
+    ここで, $X$,  $Y$ は互いに独立した一様乱数を表す. <br>
+    上述の式により, $v=z$,  $u=z\sigma$ が得られる. 以上により, レヴィ分布に従う乱数が得られた. <br>
+</body>
+
+</html>
