@@ -16,8 +16,8 @@ bibtex_bibfiles:
 
 repository:
   url: https://github.com/rice8y/Itp-gc
-  path_to_book: docs  
-  branch: main  
+  path_to_book: _docs  
+  branch: gh-pages  
 
 html:
   # favicon                   : "_images/icon.png"  
@@ -30,7 +30,7 @@ html:
   extra_footer: |
         <div>
         <script src="https://utteranc.es/client.js"
-        repo="rice8y/sqlite3"
+        repo="rice8y/Itp-gc"
         issue-term="title"
         label="💬"
         theme="github-light"
