@@ -12,7 +12,7 @@ Cはコンパイラ言語のため, Google Colaboratory上で直接セルを実�
 
 以下は, Cで標準出力をする例です.
 
-![c](../_images/c.png)
+![c](./_images/c.png)
 
 ### 解説
 
